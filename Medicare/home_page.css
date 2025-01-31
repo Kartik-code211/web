@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fb;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background: #007BFF;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header .med {
+    color: #FFD700;
+}
+
+header p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header img {
+    width: 250px;
+    margin-top: 20px;
+}
+
+  
+.features {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .feature-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .feature {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+
+/* Appointment Section */
+.appointment {
+    background: white;
+    padding: 40px;
+    margin: 30px auto;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.appointment h2 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.appointment form input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.appointment button {
+    background: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.appointment button:hover {
+    background: #0056b3;
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.status .red {
+    color: red;
+    font-weight: bold;
+}
+
+/* How It Works Section */
+.how-it-works {
+    text-align: center;
+    padding: 40px;
+    background: #e3f2fd;
+}
+
+.how-it-works h2 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.how-it-works p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Footer Styles */
+footer {
+    background: #343a40;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 250px;
+}
+
+.footer-section h3 {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}   

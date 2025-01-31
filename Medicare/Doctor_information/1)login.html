@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare - Online Medical Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f8ff;
+        }
+        .header {
+            background: linear-gradient(to right, #ff9cec, #c4f0ff);
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header span {
+            color: #6a0dad;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .appointment-form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .appointment-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .appointment-form button {
+            background: #00b4d8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            font-size: 16px;
+        }
+        .appointment-form button:hover {
+            background: #0077b6;
+        }
+        .status {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .how-it-works {
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span>M</span>edicare
+    </div>
+    <div class="container">
+        <div class="appointment-form">
+            <h2>Get your appointment</h2>
+            <div class="card">
+                <input type="text" placeholder="Enter your name">
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Gender">
+                <input type="text" placeholder="Diseases">
+                <input type="text" placeholder="Age">
+                <button>Login Page </button>
+                <div class="status"></div>
+                Patients left: <span style="color: red;">32</span> | Your number: <span style="color: red;">12</span> | Time left: <span style="color: red;">1hr:15min</span>
+            </div>
+            <div class="how-it-works">
+                <h2>How it works ??</h2>
+                <p>1. Enter your details, including name, age, gender, and address.</p>
+                <p>2. Click the "Get Appointment" button to secure your slot.</p>
+                <p>3. View your appointment number and estimated wait time.</p>
+                <p>4. Arrive at the hospital or clinic at the scheduled time for your consultation.</p>
+            </div>
+        </div>
+    </div>
+    <img src="Images/1)doctor.png" alt="Doctor Image" style="display: block; margin: 20px auto;">
+    <div class="footer">
+        &copy; 2025 Medicare. All rights reserved.
+    </div>
+    <script src="2).js"></script>
+</body>
+</html>

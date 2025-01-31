@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0faff;
+}
+
+.header {
+  background: linear-gradient(90deg, #ff99cc, #c0ffee);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.header-image {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.appointment-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 150px;
+}
+
+.get-appointment-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #33cc99;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.get-appointment-btn:hover {
+  background-color: #28a075;
+}
+
+.appointment-info {
+  margin-top: 20px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #e63946;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicare Appointment</title>
+  <link rel="stylesheet" href="1)index.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Medicare</h1>
+    <p>"Scheduling an appointment at our hospital is easy and convenient. We prioritize your well-being."</p>
+    <img src="Images/1)doctor.png" alt="Doctor" class="header-image">
+  </div>
+
+  <div class="appointment-section">
+    <h2>Get your appointment</h2>
+    <form id="appointment-form">
+      <div class="form-row">
+        <input type="text" placeholder="Enter your Full name" id="name" class="input-field" required>
+        <input type="text" placeholder="email" id="email" class="input-field" required>
+      </div>
+      <div class="form-row">
+        <select id="gender" class="input-field" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="None">None of this</option>
+        </select>
+        <input type="text" placeholder="Diseases" id="diseases" class="input-field" required>
+      </div>
+      <div class="form-row">
+        <input type="number" placeholder="Age" id="age" class="input-field" required>
+      </div>
+      <button type="submit" class="get-appointment-btn">Get Appointment</button>
+    </form>
+
+    <div class="appointment-info">
+      <p>Patients left: <span id="patients-left" class="highlight">32</span></p>
+      <p>Your no.: <span id="your-no" class="highlight">12</span></p>
+      <p>Time left: <span id="time-left" class="highlight">1hr:15min</span></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("appointment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    // Get form values
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let gender = document.getElementById("gender").value;
+    let diseases = document.getElementById("diseases").value;
+    let age = document.getElementById("age").value;
+    
+    // Retrieve stored patient list from localStorage
+    let patients = JSON.parse(localStorage.getItem("patients")) || [];
+    
+    // Assign patient number
+    let patientNumber = patients.length + 1;
+    patients.push({ Number: patientNumber, Name: name, Email: email, Gender: gender, Diseases: diseases, Age: age });
+    
+    // Store updated patient list
+    localStorage.setItem("patients", JSON.stringify(patients));
+    document.getElementById("patients-left").textContent = patients.length;
+    
+    // Create an Excel file
+    let wb = XLSX.utils.book_new();
+    let ws = XLSX.utils.json_to_sheet(patients);
+    XLSX.utils.book_append_sheet(wb, ws, "Appointments");
+    XLSX.writeFile(wb, "appointments.xlsx");
+    
+    alert("Appointment booked successfully! Your number is " + patientNumber);
+  });
+</script>
+
+  <div class="how-it-works">
+    <div class="how-it-works-text">
+      <h3>How it works ??</h3>
+      <p>1. Enter your details, including name, age, gender, address, and any medical concerns.</p>
+      <p>2. Click the "Get Appointment" button to secure your spot.</p>
+      <p>3. View your appointment number and estimated time for consultation.</p>
+      <p>4. Arrive at the hospital or clinic at the scheduled time for your consultation.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-section">
+      <h4>About</h4>
+      <p>Learn more about us.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <p>Services</p>
+      <p>Appointments</p>
+    </div>
+    <div class="footer-section">
+      <h4>Helpful Links</h4>
+      <p>Healthcare Professionals</p>
+    </div>
+    <div class="footer-section">
+      <h4>Resources</h4>
+      <p>Health Tips</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("appointment-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      window.location.href = "appointment.html";
+    });
+  </script>
+</body>
+</html>
